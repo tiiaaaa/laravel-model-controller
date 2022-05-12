@@ -5,9 +5,12 @@
 @section("main-content")
     <div class="container-fluid">
         <section class="row">
-            <div class="col-12">
-                <p>ciao</p>
-            </div>
+            @foreach ($movies as $movie)
+                <div class="col-3">
+                    <h2>{{ $movie->title }}</h2>
+                    <p>{{ $movie->original_title }}</p>
+                </div>
+            @endforeach
         </section>
 
     </div>
